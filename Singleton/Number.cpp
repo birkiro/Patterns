@@ -1,13 +1,37 @@
-#include "stdafx.h"
-#include "Number.h"
+/*! \company               $CompanyInfo:$
+*   \version               $Revision:$
+*   \checkindate           $Date:$
+*   \file                  $RCSfile:$
+***************************************************************************/
+#include "StdAfx.h"
 #include <iostream>
+
+#include "Number.h"
 #include "Octal.h"
 
+////////////////////////////////   PUBLIC    ////////////////////////////////
 
+//============================== Life Cycle   ================================
+
+/*! Default constructor.
+ *
+ ****************************************************************************/
 Number::Number()
 {
     std::wcout << _T("Number Constructor Called.") << std::endl;
 }
+
+/*! Destructor.
+ *
+ ****************************************************************************/
+Number::~Number()
+{
+}
+
+//======================== Singleton Instantiation  ===========================
+
+std::wstring Number::m_Type = _T("decimal");
+Number *Number::m_pInstance = 0;
 
 Number* Number::instance()
 {
@@ -21,15 +45,15 @@ Number* Number::instance()
     return m_pInstance;
 }
 
-void Number::SetType(std::wstring type)
-{
-    m_Type = type;
-}
+//============================== Operations  ================================
 
 void Number::PrintInfo()
 {
     std::wcout << _T("Type is: ") << GetType() << _T(" - Value is: ") << m_Value << std::endl;
 }
 
-std::wstring Number::m_Type = _T("decimal");
-Number *Number::m_pInstance = 0;
+//============================== Access      ================================
+
+////////////////////////////////   PRIVATE   ////////////////////////////////
+
+//============================== Operations  ================================

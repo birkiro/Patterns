@@ -1,14 +1,67 @@
+/*! \company               $CompanyInfo:$
+*   \version               $Revision:$
+*   \checkindate           $Date:$
+*   \file                  $RCSfile:$
+***************************************************************************/
 #pragma once
+#pragma warning(disable: 4786)
+
+// SYSTEM INCLUDES
+//
+
+// PROJECT INCLUDES
+//
+
+// LOCAL INCLUDES
+//
 #include "Number.h"
 
+// FORWARD REFERENCES
+//
+
+/*! <One line description>
+ *
+ * \ingroup <GroupName>
+ *
+ * <A longer description> 
+ *
+ * \see <Something>
+ ****************************************************************************/
 class Octal : public Number
 {
-protected:
-    Octal();
-    ~Octal();
+//public:
+//    friend class Number; // TODO: Is this needed?
 
 public:
-    friend class Number;
+    /*! \name Life Cycle */
+    //{@
+    //! Default constructor.
+    Octal();
+    //! Copy constructor.
+    Octal(const Octal& rSource) = delete;
+    //! Destructor.
+    virtual ~Octal();
+    //@}
+    
+    /*! \name Operators */
+    //{@
+    //! Assignment operator.
+    Octal& operator = (const Octal& rRhs) = delete;
+    //@}
+    
+    /*! \name Operations */
+    //{@
     void setValue(int in);
+    //@}
+    
+    /*! \name Access */
+    //{@
+    
+    //@}
+   
+private:
+    /*! \name Attributes */
+    //{@
+    
+    //@}
 };
-
