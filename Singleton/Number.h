@@ -19,13 +19,9 @@
 // FORWARD REFERENCES
 //
 
-/*! <One line description>
+/*! The Number Singleton
  *
- * \ingroup <GroupName>
- *
- * <A longer description> 
- *
- * \see <Something>
+ * \ingroup Singleton
  ****************************************************************************/
 class Number
 {

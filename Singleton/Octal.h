@@ -19,13 +19,11 @@
 // FORWARD REFERENCES
 //
 
-/*! <One line description>
+/*! Octal
  *
- * \ingroup <GroupName>
+ * \ingroup Singleton
  *
- * <A longer description> 
- *
- * \see <Something>
+ * Inherits Number 
  ****************************************************************************/
 class Octal : public Number
 {
