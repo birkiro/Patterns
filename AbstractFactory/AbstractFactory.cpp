@@ -32,6 +32,7 @@ int main()
 	shapeList.push_back(factory->createShapeInstance(EShapeType::eCurved));
 	shapeList.push_back(factory->createShapeInstance(EShapeType::eStraight));
 	shapeList.push_back(factory->createShapeInstance(EShapeType::eCurved));
+	shapeList.push_back(factory->createShapeInstance(EShapeType::eCurved));
 
 	for (auto* s : shapeList)
 		s->draw();
