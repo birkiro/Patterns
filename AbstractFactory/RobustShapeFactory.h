@@ -15,6 +15,8 @@
 // LOCAL INCLUDES
 //
 #include "IFactory.h"
+#include "Ellipse.h"
+#include "Rectangle.h"
 
 // FORWARD REFERENCES
 //
@@ -48,9 +50,11 @@ public:
     
     /*! \name Operations */
     //{@
-    
+	Shape* createShapeInstance(EShapeType type);
+	//Shape* createCurvedInstance() { return new Ellipse; }
+	//Shape* createStraightInstance() { return new Rectangle; }
     //@}
-    
+
     /*! \name Access */
     //{@
     

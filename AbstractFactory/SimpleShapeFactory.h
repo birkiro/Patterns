@@ -15,6 +15,8 @@
 // LOCAL INCLUDES
 //
 #include "IFactory.h"
+#include "Circle.h"
+#include "Square.h"
 
 // FORWARD REFERENCES
 //
@@ -48,7 +50,9 @@ public:
     
     /*! \name Operations */
     //{@
-    
+	Shape* createShapeInstance(EShapeType type);
+	//Shape* createCurvedInstance() { return new Circle; }
+	//Shape* createStraightInstance() { return new Square; }
     //@}
     
     /*! \name Access */

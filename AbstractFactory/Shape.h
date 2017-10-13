@@ -26,6 +26,12 @@
  *
  * \see <Something>
  ****************************************************************************/
+enum EShapeType
+{
+	eCurved,
+	eStraight
+};
+
 class Shape
 {
 public:
@@ -45,19 +51,20 @@ public:
     Shape& operator = (const Shape& rRhs) = delete;
     //@}
     
-    /*! \name Operations */
+    /*! \name Interface */
     //{@
-    
+	virtual void draw() = 0;
     //@}
     
     /*! \name Access */
     //{@
-    
+	
     //@}
    
-private:
+protected:
     /*! \name Attributes */
     //{@
-    
+	int m_Id;
+	static int g_ObjectCount;
     //@}
 };

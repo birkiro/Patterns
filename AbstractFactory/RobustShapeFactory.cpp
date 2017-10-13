@@ -25,6 +25,21 @@ RobustShapeFactory::~RobustShapeFactory()
 {
 }
 
+Shape* RobustShapeFactory::createShapeInstance(EShapeType type)
+{
+	switch (type)
+	{
+	case eCurved:
+		return new Ellipse;
+		break;
+	case eStraight:
+		return new Rectangle;
+		break;
+	default:
+		break;
+	}
+}
+
 //============================== Operations  ================================
 
 //============================== Access      ================================

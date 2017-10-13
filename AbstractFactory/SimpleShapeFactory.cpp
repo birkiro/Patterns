@@ -25,6 +25,21 @@ SimpleShapeFactory::~SimpleShapeFactory()
 {
 }
 
+Shape* SimpleShapeFactory::createShapeInstance(EShapeType type)
+{
+	switch (type)
+	{
+	case eCurved:
+		return new Circle;
+		break;
+	case eStraight:
+		return new Square;
+		break;
+	default:
+		break;
+	}
+}
+
 //============================== Operations  ================================
 
 //============================== Access      ================================

@@ -4,6 +4,7 @@
 *   \file                  $RCSfile:$
 ***************************************************************************/
 #pragma once
+#include "Shape.h"
 #pragma warning(disable: 4786)
 
 // SYSTEM INCLUDES
@@ -47,7 +48,9 @@ public:
     
     /*! \name Operations */
     //{@
-    
+	virtual Shape* createShapeInstance(EShapeType type) = 0;
+	//virtual Shape* createCurvedInstance() = 0;
+	//virtual Shape* createStraightInstance() = 0;
     //@}
     
     /*! \name Access */
