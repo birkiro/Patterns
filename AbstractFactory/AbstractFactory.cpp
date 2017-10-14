@@ -37,11 +37,10 @@ int main()
 	for (auto* s : shapeList) 
 	{
 		s->PrintInfo();
-		s->Draw(); 
+		s->Draw();
 	}
 
 	std::cin.get();
 
     return 0;
 }
-
