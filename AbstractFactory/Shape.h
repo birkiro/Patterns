@@ -53,7 +53,8 @@ public:
     
     /*! \name Interface */
     //{@
-	virtual void draw() = 0;
+	virtual void Draw() = 0;
+	virtual void PrintInfo() = 0;
     //@}
     
     /*! \name Access */

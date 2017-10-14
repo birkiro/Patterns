@@ -26,9 +26,14 @@ Square::~Square()
 {
 }
 
-void Square::draw()
+void Square::Draw()
 {
 	std::wcout << _T("Drawing Square.") << std::endl;
+}
+
+void Square::PrintInfo()
+{
+	std::wcout << _T("Printing Class ") << typeid(Square).name() << _T(", ID no: ") << m_Id << std::endl;
 }
 
 //============================== Operations  ================================

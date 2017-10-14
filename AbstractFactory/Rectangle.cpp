@@ -26,9 +26,14 @@ Rectangle::~Rectangle()
 {
 }
 
-void Rectangle::draw()
+void Rectangle::Draw()
 {
 	std::wcout << _T("Drawing Rectangle.") << std::endl;
+}
+
+void Rectangle::PrintInfo()
+{
+	std::wcout << _T("Printing Class ") << typeid(Rectangle).name() << _T(", ID no: ") << m_Id << std::endl;
 }
 
 //============================== Operations  ================================

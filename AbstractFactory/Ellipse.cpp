@@ -26,9 +26,14 @@ Ellipse::~Ellipse()
 {
 }
 
-void Ellipse::draw()
+void Ellipse::Draw()
 {
 	std::wcout << _T("Drawing Ellipse.") << std::endl;
+}
+
+void Ellipse::PrintInfo()
+{
+	std::wcout << _T("Printing Class ") << typeid(Ellipse).name() << _T(", ID no: ") << m_Id << std::endl;
 }
 
 //============================== Operations  ================================

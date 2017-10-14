@@ -48,7 +48,8 @@ public:
     
     /*! \name Operations */
     //{@
-	virtual void draw();
+	virtual void Draw();
+	virtual void PrintInfo();
     //@}
     
     /*! \name Access */

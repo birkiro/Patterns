@@ -14,7 +14,7 @@
 #include "RobustShapeFactory.h"
 #include <iostream>
 
-#define SIMPLE
+#define ROBUST
 
 int Shape::g_ObjectCount = 0;
 
@@ -34,8 +34,11 @@ int main()
 	shapeList.push_back(factory->createShapeInstance(EShapeType::eCurved));
 	shapeList.push_back(factory->createShapeInstance(EShapeType::eCurved));
 
-	for (auto* s : shapeList)
-		s->draw();
+	for (auto* s : shapeList) 
+	{
+		s->PrintInfo();
+		s->Draw(); 
+	}
 
 	std::cin.get();
 
