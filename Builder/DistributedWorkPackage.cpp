@@ -12,19 +12,24 @@ DistributedWorkPackage::DistributedWorkPackage(char *type)
 void DistributedWorkPackage::SetFile(char *f, char *v)
 {
     sprintf_s(m_TempString, "\n  File(%s): %s", f, v);
-    strcat_s(m_Description, m_TempString);
+    AppendString();
 }
 
 void DistributedWorkPackage::SetQueue(char *q, char *v)
 {
     sprintf_s(m_TempString, "\n  Queue(%s): %s", q, v);
-    strcat_s(m_Description, m_TempString);
+    AppendString();
 }
 
 void DistributedWorkPackage::SetPathway(char *p, char *v)
 {
     sprintf_s(m_TempString, "\n  Pathway(%s): %s", p, v);
-    strcat_s(m_Description, m_TempString);
+    AppendString();
+}
+
+void DistributedWorkPackage::AppendString()
+{
+    strcat_s(m_Description, sizeof(m_Description) + 50, m_TempString);
 }
 
 const char* DistributedWorkPackage::GetState()

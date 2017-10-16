@@ -1,3 +1,8 @@
+/*! \company               $CompanyInfo:$
+*   \version               $Revision:$
+*   \checkindate           $Date:$
+*   \file                  $RCSfile:$
+***************************************************************************/
 #pragma once
 #pragma warning(disable: 4786)
 
@@ -30,6 +35,7 @@ public:
     DistributedWorkPackage(char *type);
     //@}
 
+    //! Copy constructor.
     DistributedWorkPackage(const DistributedWorkPackage& rSource) = delete;
     //! Destructor.
     virtual ~DistributedWorkPackage(){}
@@ -46,6 +52,7 @@ public:
     void SetFile(char *f, char *v);
     void SetQueue(char *q, char *v);
     void SetPathway(char *p, char *v);
+    void AppendString();
     const char* GetState();
     //@}
 
