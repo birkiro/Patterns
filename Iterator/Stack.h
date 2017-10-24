@@ -1,10 +1,9 @@
-/*! \company               $CompanyInfo:$
-*   \version               $Revision:$
-*   \checkindate           $Date:$
-*   \file                  $RCSfile:$
-***************************************************************************/
+// /*! \company               $CompanyInfo:$
+// *   \version               $Revision:$
+// *   \checkindate           $Date:$
+// *   \file                  $RCSfile:$
+// ***************************************************************************/
 #pragma once
-#include "StackIterator.h"
 #pragma warning(disable: 4786)
 
 // SYSTEM INCLUDES
@@ -29,42 +28,51 @@
  *
  * \see <Something>
  ****************************************************************************/
-class Stack
-{
-public:
-    friend class StackIterator;
-	/*! \name Life Cycle */
-	//{@
-	//! Default constructor.
-	Stack();
-	//! Destructor.
-	virtual ~Stack();
-	//! Copy constructor.
-    Stack(const Stack& rSource) = delete;
-	//@}
-
-    /*! \name Operators */
-    //{@
-    //! Assignment operator.
-    Stack& operator = (const Stack& rRhs) = delete;
-	//@}
-
-	/*! \name Operations */
-	//{@
-    void push(int val) { m_IntList[++m_Pos] = val; }
-    int pop() { return m_IntList[m_Pos--]; }
-    bool isEmpty() { return m_Pos == -1; }
-	//@}
-
-	/*! \name Access */
-	//{@
-    StackIterator* createIterator()const;
-	//@}
-
-private:
-	/*! \name Attributes */
-	//{@
-    int m_IntList[MAX_SIZE];
-    int m_Pos;
-	//@}
-};
+// class Stack
+// {
+//     int m_Items[10];
+//     int m_Stkptr;
+// public:
+//     friend class StackIterator;
+// 
+//     Stack() { m_Stkptr = -1; }
+//     void push(int in){m_Items[++m_Stkptr] = in; }
+//     int pop(){ return m_Items[m_Stkptr--]; }
+//     bool isEmpty(){ return (m_Stkptr == -1); }
+//     
+//     StackIterator *createIterator() const;  // 2. Add a createIterator() member
+// };
+// 
+// class StackIterator
+// {
+//     // 1. Design an "iterator" class
+//     const Stack* m_Stack;
+//     int m_Index;
+// public:
+//     StackIterator(const Stack *s){ m_Stack = s; }
+//     
+//     void first() { m_Index = 0; }
+//     void next() {m_Index++;}
+//     bool isDone(){return m_Index == m_Stack->m_Stkptr + 1;}
+//     int currentItem(){ return m_Stack->m_Items[m_Index]; }
+// };
+// 
+// StackIterator* Stack::createIterator() const 
+// { 
+//     return new StackIterator(this); 
+// }
+// 
+// bool operator == (const Stack &l, const Stack &r)
+// {
+//     // 3. Clients ask the container object to create an iterator object
+//     StackIterator *itl = l.createIterator();
+//     StackIterator *itr = r.createIterator();
+//     // 4. Clients use the first(), isDone(), next(), and currentItem() protocol
+//     for (itl->first(), itr->first(); !itl->isDone(); itl->next(), itr->next())
+//         if (itl->currentItem() != itr->currentItem())
+//             break;
+//     bool ans = itl->isDone() && itr->isDone();
+//     delete itl;
+//     delete itr;
+//     return ans;
+// }
