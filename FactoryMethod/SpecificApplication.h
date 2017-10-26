@@ -43,7 +43,7 @@ public:
 
 	/*! \name Operations */
 	//{@
-    Document* CreateDocument(char *fn);
+    virtual Document* CreateDocument(char *fn);
 	//@}
 
 	/*! \name Access */

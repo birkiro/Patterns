@@ -47,7 +47,7 @@ public:
     void OpenDocument();
     void ReportDocs();
     /* Framework declares a "hole" for the client to customize */
-    virtual Document *CreateDocument(char*) = 0;
+    virtual Document* CreateDocument(char*) = 0;
 	//@}
 
 	/*! \name Access */

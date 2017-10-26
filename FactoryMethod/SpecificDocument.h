@@ -42,8 +42,8 @@ public:
 
 	/*! \name Operations */
 	//{@
-    void Open();
-    void Close();
+    virtual void Open();
+    virtual void Close();
 	//@}
 
 	/*! \name Access */
